@@ -1,8 +1,9 @@
+
 import axios from "axios"
 //服务器域名
 const baseURL = "https://kkbhoutai.herentongkang.com"
 //请求token
-const token = "a28bb515-cafb-4465-b2f0-a3fe91fadffa"
+const token = "1aafdb5f-6fb3-457d-b0e7-bd5c15a1f95c"
 //响应拦截器
 axios.interceptors.response.use(
     (response) => {
@@ -34,7 +35,10 @@ const request = (query) => {
     return axios.request(query).then(res => {
         return Code(res)
     }).catch((e) => {
-        return Promise.reject(e)
+        console.log("失败了",e)
+        return Promise.reject({
+            message:"失败了"
+        })
     })
 }
 
@@ -56,6 +60,7 @@ const Code = (res) => {
         // 在登录成功后返回当前页面，这一步需要在登录页操作。                
         case 401: //重定向
             // token:登录失效
+            console.log("401,登录失效")
             break;
         // 403 token过期
         // 清除token并跳转登录页

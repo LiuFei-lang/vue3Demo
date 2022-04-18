@@ -35,7 +35,7 @@ export default {
 				},
 				{
 					txt:'Cs',
-					page:'Cs',
+					page:'cs',
 					// normalImg:require('../assets/images/zz_09.jpg'),
 					// activeImg:require('../assets/images/icon2_03.jpg')
 				}

@@ -38,7 +38,7 @@ export default {
     changePage: function () {
       console.log(this.sel,this.page)
       //点击跳转对应的页面
-      this.$router.push("/" + this.page);
+      this.$router.replace("/" + this.page);
       this.$emit("changed", this.page);
     },
   },
