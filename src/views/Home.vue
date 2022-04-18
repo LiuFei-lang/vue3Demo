@@ -2,6 +2,8 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <button v-on:click="addToCart">Add to cart</button>
     <p>Cart({{ cart }})</p>
+    
+
     <bto class="bto"></bto>
 </template>
 
@@ -88,7 +90,7 @@ export default {
   * 该钩子在服务器端渲染期间不被调用。
   */
   beforeUnmount(){
-    console.log("beforeUnmount")
+    console.log("当前路由页面卸载开始")
   },
   /**
   * 卸载组件实例后调用。调用此钩子时，组件实例的所有指令都被解除绑定，
@@ -96,7 +98,7 @@ export default {
   * 该钩子在服务器端渲染期间不被调用。
   */
   unmounted(){
-    console.log("unmounted")
+    console.log("当前路由页面卸载完成")
   },
   /**
    * 跟踪虚拟 DOM 重新渲染时调用。钩子接收 debugger event 作为参数。
@@ -134,4 +136,5 @@ export default {
     position: fixed;
     bottom: 0;
   }
+  
 </style>

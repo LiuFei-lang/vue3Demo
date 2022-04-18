@@ -14,7 +14,7 @@ export default {
                 },1000)
             }
         )
-        console.log("--------111")
+        // console.log("--------111")
         const x = await p;
         console.log(x)
         return {

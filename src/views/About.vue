@@ -8,7 +8,8 @@ export default {
   },
   data(){
     return{
-
+      userInfo:{},
+      a:1
     }
   },
   mounted(){
@@ -17,14 +18,15 @@ export default {
   methods:{
     async getUser(){
       console.log(123)
-        const userInfo = await getUser()
-        console.log(userInfo)
+        const a = await getUser()
+        this.userInfo=a.data
+        console.log(this.userInfo)
     }
   },
   render(){
     return(
       <div>
-        <h1>This is an about page</h1>
+        <h1>This is an about page{this.a +"-"+this.userInfo.id}</h1>
         <bto class="bto"></bto>
       </div>
     )
